@@ -20,7 +20,7 @@ body {
 /* Container to hold everything */
 .container {
     width: 100%;
-    max-width: 1000px; /* Optional: Adjust max-width to fit design */
+
     text-align: center;
     position: relative;
     padding: 0;
@@ -48,6 +48,7 @@ body {
 .top-left a {
     text-decoration: none;
     color: black;
+    
 }
 
 /* Top right corner (Buttons for Education and Projects) */
@@ -85,6 +86,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transform: scale(1.5);
 }
 
 h1 {
@@ -121,6 +123,8 @@ p {
     letter-spacing: 0.05rem;
     text-align: center;
     padding-bottom: 10px; /* Optional: Small padding for breathing room */
+    transform: scale(1.25);
+    max-width: 750px;
 }
 
 .bottom p {
@@ -130,4 +134,24 @@ p {
 .no-bullets {
     list-style-type: none;
     padding-left: 0; /* Removes default indentation */
+}
+/* Styles for mobile devices only (screen width less than 768px) */
+@media only screen and (max-width: 768px) {
+    .container {
+        justify-content: flex-start; /* Align items from the top */
+        height: auto; /* Adjust height for mobile */
+        padding: 20px; /* Optional: Add some padding */
+    }
+
+    /* Remove absolute positioning for mobile */
+    .bottom {
+        position: relative;
+        bottom: unset;
+        margin-top: 20px; /* Add margin to separate from the graduation date */
+        width: 100%;
+    }
+
+    h1, h2, p {
+        margin-bottom: 10px; /* Ensure spacing between elements */
+    }
 }
