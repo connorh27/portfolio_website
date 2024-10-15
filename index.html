@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connor Hildebrandt - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Connor Hildebrandt</h1>
+            <p class="title">Computer Science Student - Virginia Tech (Class of 2027)</p>
+        </header>
+        <section class="contact">
+            <p><strong>Phone:</strong> 301-465-0621</p>
+            <p><strong>Email:</strong> <a href="mailto:connorhildebrandt27@gmail.com">connorhildebrandt27@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/connorh27" target="_blank">linkedin.com/in/connorh27</a></p>
+            <p><strong>Location:</strong> Middletown, MD</p>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <p><strong>Virginia Tech</strong> - Graduating 2027</p>
+            <p><strong>Relevant Courses:</strong> Calculus III, Discrete Math, Applied Combinatorics, Linear Algebra, Software Design & Data Structures</p>
+            <p><strong>Middletown High School / Frederick Community College</strong> - GPA: 4.4</p>
+        </section>
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>Languages:</strong> Python, Java, JavaScript, HTML/CSS</p>
+            <p><strong>Technologies:</strong> Git, PyCharm, VS Code, Eclipse, Excel/Word</p>
+        </section>
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <p><strong>Server/Takeout Specialist - Red Lobster (2021-2023)</strong><br>Provided exceptional customer service, upselling and managing takeout orders.</p>
+            <p><strong>Volunteer - Feeding Frederick (2022)</strong><br>Helped with food preparation and distribution for the community.</p>
+            <p><strong>Member - Leukemia and Lymphoma Society Club (2023-Present)</strong><br>Assisted in expanding the club’s reach at Virginia Tech.</p>
+        </section>
+        <section class="projects">
+            <h2><a href="#" id="open-modal">Projects</a></h2>
+        </section>
+        
+        <!-- Modal Structure -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Projects</h2>
+                <p><strong>Driving Hour Tracker</strong> (JavaScript, ReactJS, HTML, CSS)<br>Built a mobile app for tracking driving hours using timers and responsive design.</p>
+                <p><strong>Algorithmic Stock Trading Bot</strong> (Python)<br>Developed a stock trading bot using a 9-EMA crossover strategy with extensive back testing.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("modal");
+        const openModal = document.getElementById("open-modal");
+        const closeModal = document.querySelector(".close");
+    
+        openModal.addEventListener("click", function(event) {
+            event.preventDefault();
+            modal.style.display = "flex";
+        });
+    
+        closeModal.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+    
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
